@@ -25,6 +25,8 @@ To run this service, make sure you have the following installed:
 
     ```bash
     go mod tidy
+    go get github.com/gin-gonic/gin
+
     ```
 
 3. Run the application:
