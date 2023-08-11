@@ -49,18 +49,22 @@ The service should now be running at http://localhost:8080.
 
 ### 1. List Restaurants in a City
 
-Endpoint: `GET /restaurants-in-city`
+Endpoint: `GET /restaurants-in-city?city_code=<city_code>`
 
 - Parameters: `city_code` (string)
 - Returns a list of restaurants in the specified city.
 
+
+![](/images/city.png)
+
 ### 2. List Food Options Near a Location
 
-Endpoint: `GET /food-options-near`
+Endpoint: `GET /food-options-near?latitude=<latitude>&longitude=<longitude>`
 
 - Parameters: `latitude` (float), `longitude` (float)
 - Returns a list of food options near the specified location (within 5 kilometers).
 
+![](/images/food-option.png)
 ### 3. CORS Support
 
 The service includes CORS middleware to allow requests from different origins.
