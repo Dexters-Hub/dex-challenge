@@ -65,17 +65,48 @@ Endpoint: `GET /food-options-near?latitude=<latitude>&longitude=<longitude>`
 - Returns a list of food options near the specified location (within 5 kilometers).
 
 ![](/images/food-option.png)
-### 3. CORS Support
+
+### 3. List Restaurants Sorted by Rating
+
+Endpoint: `GET /restaurants-sorted-by-rating?city_code=<city_code>`
+
+- Parameters: `city_code` (string)
+- Returns a list of restaurants in the specified city, sorted by rating.
+
+![](/images/sorted.png)
+
+### 4. Filter by Table Booking
+
+Endpoint: `GET /filter-by-table-booking?city_code=<city_code>&has_table_booking=true`
+
+- Parameters: `city_code` (string), `has_table_booking` (boolean)
+- Returns a list of restaurants in the specified city that offer table booking.
+
+![](/images/table-booking.png)
+### 5. Filter by Online Delivery
+
+Endpoint: `GET /filter-by-online-delivery?city_code=<city_code>&has_online_delivery=true`
+
+- Parameters: `city_code` (string), `has_online_delivery` (boolean)
+- Returns a list of restaurants in the specified city that offer online delivery.
+
+![](/images/online.png)
+
+### 6. Filter by Cuisines
+
+Endpoint: `GET /filter-by-cuisines?city_code=<city_code>&cuisines=<cuisine_name>`
+
+- Parameters: `city_code` (string), `cuisines` (string)
+- Returns a list of restaurants in the specified city that serve the specified cuisine.
+
+![](/images/cuisine.png)
+### 7. CORS Support
 
 The service includes CORS middleware to allow requests from different origins.
 
-### 4. CSV Data Parsing
+### 8. CSV Data Parsing
 
 The service loads restaurant data from the provided CSV file and maps it to the defined model structure.
-
-### 5. Sorting and Filtering
-
-The service provides sorting by rating and supports filtering options such as table booking, online delivery, and cuisines.
 
 ## Contributions
 
